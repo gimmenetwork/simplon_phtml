@@ -1,0 +1,14 @@
+<?php
+/**
+ * @var string $world
+ * @var array $list
+ */
+?>
+
+<h1>Hello <?php echo $world ?></h1>
+
+<ul>
+    <?php foreach ($list as $person): ?>
+        <li><?php echo $person['name'] ?></li>
+    <?php endforeach ?>
+</ul>
