@@ -17,7 +17,7 @@ class Phtml
      * @return string
      * @throws PhtmlException
      */
-    public static function render($pathTemplate, array $data, $fileExtension = '.phtml')
+    public static function render($pathTemplate, array $data = [], $fileExtension = '.phtml')
     {
         // set file name
         $fileName = $pathTemplate . $fileExtension;
@@ -40,6 +40,6 @@ class Phtml
             return (string)$template;
         }
 
-        throw new PhtmlException('Missing given template file: ' . $pathTemplate);
+        throw new PhtmlException('Missing given template file: ' . $fileName);
     }
 }
