@@ -12,18 +12,14 @@ class Phtml
     /**
      * @param $pathTemplate
      * @param array $data
-     * @param string $fileExtension
      *
      * @return string
      * @throws PhtmlException
      */
-    public static function render($pathTemplate, array $data = [], $fileExtension = '.phtml')
+    public static function render($pathTemplate, array $data = [])
     {
-        // set file name
-        $fileName = $pathTemplate . $fileExtension;
-
         // make sure the file exists
-        if (file_exists($fileName) === true)
+        if (file_exists($pathTemplate) === true)
         {
             // start output caching
             ob_start();
@@ -32,7 +28,7 @@ class Phtml
             extract($data);
 
             // load php file
-            require $fileName;
+            require $pathTemplate;
 
             // assign output cache to variable
             $template = ob_get_clean();
@@ -40,6 +36,6 @@ class Phtml
             return (string)$template;
         }
 
-        throw new PhtmlException('Missing given template file: ' . $fileName);
+        throw new PhtmlException('Missing given template file: ' . $pathTemplate);
     }
 }
