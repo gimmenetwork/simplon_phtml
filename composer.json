@@ -1,6 +1,6 @@
 {
-    "name": "simplon/phtml",
-    "description": "Simple, straight forward implementation of php templates.",
+    "name": "gimmenetwork/simplon_phtml",
+    "description": "[FORK] Simple, straight forward implementation of php templates.",
     "homepage": "https://github.com/fightbulc/simplon_phtml",
     "type": "library",
     "keywords": [
