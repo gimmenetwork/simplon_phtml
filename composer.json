@@ -23,5 +23,8 @@
         "psr-4": {
             "Simplon\\Phtml\\": "src/"
         }
+    },
+    "replace": {
+        "simplon/phtml": "0.2.*"
     }
 }
